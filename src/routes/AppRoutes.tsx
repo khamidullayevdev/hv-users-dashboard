@@ -1,5 +1,5 @@
 import Sidebar from "@/components/Sidebar"
-import LandingPage from "@/pages/LandingPage"
+import UsersTable from "@/components/UsersTable"
 import { Routes, Route } from "react-router-dom"
 
 const AppRoutes = () => {
@@ -9,7 +9,7 @@ const AppRoutes = () => {
                     
             <main className="grow">
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/" element={<UsersTable />} />
                 </Routes>
             </main>
         </div>
