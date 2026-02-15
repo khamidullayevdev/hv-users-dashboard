@@ -219,10 +219,10 @@ const UsersTable = () => {
   }, [setUsers])
 
   return (
-    <div className="p-6">
+    <div className="p-7 lg:p-16 bg-white">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold mb-2">Users Dashboard</h1>
-        <p className="text-gray-600">
+        <h1 className="font-bold text-[40px] leading-[100%] mb-[12px]">Users Dashboard</h1>
+        <p className="text-[#00000080] font-medium text-[1.063rem] leading-[100%]">
           Showing {displayedData.length.toLocaleString()} of {filteredData.length.toLocaleString()} users
           {filteredData.length !== users.length && ` (filtered from ${users.length.toLocaleString()} total)`}
         </p>
@@ -231,24 +231,24 @@ const UsersTable = () => {
       {/* search & filters */}
       <div className="flex gap-4 mb-6">
         <div className="flex-1 relative">
-          <input
-            className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
-            placeholder="Search by name or email..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          {search && (
-            <button
-              onClick={() => setSearch("")}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              ✕
-            </button>
-          )}
+          <div className="relative flex items-center pl-[20px] rounded-[16px] border-[2px] border-[#E0DCDC]">
+            <label htmlFor="search" className="shrink-0 py-[14px]">
+              <svg className="w-[24px] h-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path stroke="#9E9E9E" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 21-4.34-4.34M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/></svg>
+            </label>
+
+            <input 
+              type="text" 
+              placeholder="Search by name or email..." 
+              className="outline-none placeholder:text-[#9E9E9E] text-black font-semibold text-[1rem] leading-[150%] tracking-[0%] pl-[12px] pr-[20px] py-[14px] w-full grow"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            
+            />
+          </div>
         </div>
 
         <select
-          className="border border-gray-300 rounded-lg p-3 min-w-[150px] focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+          className="role-select border-2 border-[#E0DCDC] rounded-[16px] pl-4 pr-3 min-w-[150px] text-black font-semibold text-[1rem] leading-[150%] tracking-[0%] focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
           value={roleFilter || ""}
           onChange={(e) => setRoleFilter(e.target.value || null)}
         >

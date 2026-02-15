@@ -20,3 +20,14 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+.role-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("./assets/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center; /* 12px from right */
+  background-size: 20px 20px;
+  cursor: pointer;
+}
