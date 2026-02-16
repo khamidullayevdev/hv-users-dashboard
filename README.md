@@ -1,6 +1,6 @@
 # 🚀 High-Volume Users Dashboard
 
-A performant React application demonstrating advanced rendering optimization and state management with 10,000+ users.
+A performant React application demonstrating advanced rendering optimization and state management with 20,000+ users.
 
 ![React](https://img.shields.io/badge/React-18.x-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
